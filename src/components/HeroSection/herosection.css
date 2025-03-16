@@ -1,0 +1,24 @@
+.home {
+    background-image: url(../../assets/home-bg.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: fixed;
+  }
+  
+  
+  
+  @media (max-width: 900px) {
+      .home {
+        background-image: url(../../assets/sm-home-logo.jpeg);
+        background-size:contain;
+        background-position: fixed;
+      }
+  }
+  
+  @media (max-width: 600px) {
+      .home{
+          background-size: contain;
+          background-repeat: no-repeat;
+      }
+  }
+

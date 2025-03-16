@@ -1,11 +1,15 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
+import Navbar from '../components/Navbar/Navbar'
+import './homepage.css'
+import FoodMenu from '../components/FoodMenu'
+import HeroSection from '../components/HeroSection/HeroSection'
 
 export default function HomePage() {
   return (
-    <div className='text-center min-h-screen min-w-screen bg-gray-100'>
+    <div className='home text-center min-h-screen min-w-screen'>
         <Navbar/>
-      <h1>This is home page</h1>
+        <HeroSection/>
+        <FoodMenu/>
     </div>
   )
 }
