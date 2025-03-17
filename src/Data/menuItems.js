@@ -4,7 +4,7 @@ export const menuItems = [
       type: "Appetizer",
       name: "Vegetable Samosa",
       image: "https://cdn.pixabay.com/photo/2024/06/27/06/11/appetizer-8856378_1280.jpg",
-      price: "₹50",
+      price: "50",
       rating: 4.5,
       estimatedTime: "15 min"
     },
@@ -13,7 +13,7 @@ export const menuItems = [
       type: "Main Course",
       name: "Butter Chicken",
       image: "https://source.unsplash.com/200x200/?butter-chicken",
-      price: "₹320",
+      price: "320",
       rating: 4.8,
       estimatedTime: "25 min"
     },
@@ -22,7 +22,7 @@ export const menuItems = [
       type: "Dessert",
       name: "Gulab Jamun (2 pcs)",
       image: "https://source.unsplash.com/200x200/?gulab-jamun",
-      price: "₹90",
+      price: "90",
       rating: 4.6,
       estimatedTime: "10 min"
     },
@@ -31,7 +31,7 @@ export const menuItems = [
       type: "Bread",
       name: "Garlic Naan",
       image: "https://source.unsplash.com/200x200/?garlic-naan",
-      price: "₹60",
+      price: "60",
       rating: 4.7,
       estimatedTime: "15 min"
     },
@@ -40,7 +40,7 @@ export const menuItems = [
       type: "Rice",
       name: "Vegetable Biryani",
       image: "https://source.unsplash.com/200x200/?vegetable-biryani",
-      price: "₹180",
+      price: "180",
       rating: 4.4,
       estimatedTime: "20 min"
     },
@@ -49,7 +49,7 @@ export const menuItems = [
       type: "Street Food",
       name: "Pani Puri",
       image: "https://source.unsplash.com/200x200/?pani-puri",
-      price: "₹40",
+      price: "40",
       rating: 4.9,
       estimatedTime: "10 min"
     },
@@ -58,7 +58,7 @@ export const menuItems = [
       type: "Main Course",
       name: "Palak Paneer",
       image: "https://source.unsplash.com/200x200/?palak-paneer",
-      price: "₹250",
+      price: "250",
       rating: 4.5,
       estimatedTime: "20 min"
     },
@@ -67,7 +67,7 @@ export const menuItems = [
       type: "Appetizer",
       name: "Chicken Tikka",
       image: "https://source.unsplash.com/200x200/?chicken-tikka",
-      price: "₹280",
+      price: "280",
       rating: 4.7,
       estimatedTime: "25 min"
     },
@@ -76,7 +76,7 @@ export const menuItems = [
       type: "Dessert",
       name: "Rasmalai",
       image: "https://source.unsplash.com/200x200/?rasmalai",
-      price: "₹110",
+      price: "110",
       rating: 4.6,
       estimatedTime: "12 min"
     },
@@ -85,7 +85,7 @@ export const menuItems = [
       type: "Beverage",
       name: "Masala Chai",
       image: "https://source.unsplash.com/200x200/?masala-chai",
-      price: "₹30",
+      price: "30",
       rating: 4.8,
       estimatedTime: "8 min"
     },
@@ -94,7 +94,7 @@ export const menuItems = [
       type: "Rice",
       name: "Chicken Biryani",
       image: "https://source.unsplash.com/200x200/?chicken-biryani",
-      price: "₹280",
+      price: "280",
       rating: 4.7,
       estimatedTime: "25 min"
     },
@@ -103,7 +103,7 @@ export const menuItems = [
       type: "Main Course",
       name: "Dal Makhani",
       image: "https://source.unsplash.com/200x200/?dal-makhani",
-      price: "₹200",
+      price: "200",
       rating: 4.6,
       estimatedTime: "18 min"
     },
@@ -112,7 +112,7 @@ export const menuItems = [
       type: "Street Food",
       name: "Vada Pav",
       image: "https://source.unsplash.com/200x200/?vada-pav",
-      price: "₹35",
+      price: "35",
       rating: 4.5,
       estimatedTime: "12 min"
     },
@@ -121,7 +121,7 @@ export const menuItems = [
       type: "Appetizer",
       name: "Paneer Tikka",
       image: "https://source.unsplash.com/200x200/?paneer-tikka",
-      price: "₹240",
+      price: "240",
       rating: 4.6,
       estimatedTime: "20 min"
     },
@@ -130,7 +130,7 @@ export const menuItems = [
       type: "Beverage",
       name: "Mango Lassi",
       image: "https://source.unsplash.com/200x200/?mango-lassi",
-      price: "₹80",
+      price: "80",
       rating: 4.7,
       estimatedTime: "7 min"
     },
@@ -140,7 +140,7 @@ export const menuItems = [
       type: "Dessert",
       name: "Kheer",
       image: "https://source.unsplash.com/200x200/?kheer",
-      price: "₹100",
+      price: "100",
       rating: 4.5,
       estimatedTime: "15 min"
     }

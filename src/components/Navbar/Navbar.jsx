@@ -7,6 +7,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { TipsAndUpdates, Home, ShoppingCart } from "@mui/icons-material";
 import "./Navbar.css";
 
+import { Link } from "react-router-dom";
 export default function Navbar() {
   const [user] = useAuthState(auth);
 
@@ -18,7 +19,7 @@ export default function Navbar() {
         <ul className="nav-links flex list-none justify-between gap-4 w-80 text-2xl">
           <li>Home</li>
           <li>AI Chef</li>
-          <li>Cart</li>
+          <Link to="/cart"><li>Cart</li></Link>
         </ul>
 
         <div className=" nav-icons flex justify-between w-40">
