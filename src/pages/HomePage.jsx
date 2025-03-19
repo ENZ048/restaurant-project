@@ -7,7 +7,7 @@ import { useState } from 'react'
 
 
 export default function HomePage() {
-
+  
   const [cart, setCart] = useState([]);
 
   const addToCart = (item) => {
@@ -19,7 +19,7 @@ export default function HomePage() {
 
 
   return (
-    <div className='home text-center min-h-screen min-w-screen'>
+    <div className='home-bg text-center min-h-screen min-w-screen'>
         <Navbar/>
         <HeroSection/>
         <FoodMenu cart={cart} addToCart={addToCart}/>

@@ -37,7 +37,7 @@ const SignupForm = ({onSignup}) => {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button type="submit" className="bg-green-500 text-white py-2 rounded-md">
+      <button type="submit" className="bg-green-500 cursor-pointer text-white py-2 rounded-md">
         Sign Up
       </button>
     </form>

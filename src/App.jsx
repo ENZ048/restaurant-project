@@ -5,6 +5,7 @@ import AuthPage from './pages/AuthPage'
 import PortectedRoutes from "./components/PortectedRoutes";
 import CartPage from "./pages/CartPage";
 import { CartProvider } from "./CartProvider";
+import AIChef from "./pages/AIChef";
 
 
 function App() {
@@ -26,6 +27,14 @@ function App() {
           element={
             <PortectedRoutes>
               <CartPage/>
+            </PortectedRoutes>
+          }
+        />
+
+        <Route path="/ai-chef"
+          element={
+            <PortectedRoutes>
+              <AIChef/>
             </PortectedRoutes>
           }
         />

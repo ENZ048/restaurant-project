@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { menuItems } from "../Data/menuItems";
 import FoodCard from "../components/FoodCard/FoodCard";
 import Divider from "@mui/material/Divider";
+import All from '../assets/cat-all.jpg'
+import apitize from '../assets/apitize.jpg'
 
 const FoodMenu = ({cart, addToCart}) => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -9,10 +11,10 @@ const FoodMenu = ({cart, addToCart}) => {
   const [sortOption, setSortOption] = useState("");
 
   const foodCategories = [
-    { name: "All", image: "https://source.unsplash.com/100x100/?food" },
+    { name: "All", image: All },
     {
       name: "Appetizer",    
-      image: "https://source.unsplash.com/100x100/?appetizer",
+      image: apitize,
     },
     { name: "Main Course", image: "https://source.unsplash.com/100x100/?meal" },
     { name: "Dessert", image: "https://source.unsplash.com/100x100/?dessert" },
@@ -48,9 +50,11 @@ const FoodMenu = ({cart, addToCart}) => {
   });
 
   return (
-    <div className="container mx-auto px-4 py-8 md:mt-[7rem] xl:mt-[17rem] lg-mt[20rem]  2xl:mt-[26rem]">
+    <div className="container mx-auto px-4 mt-15">
+      <div className="bg-white/80 rounded p-5">
       {/* Search Input */}
       <div className="mb-4">
+        <p style={{fontSize: '2rem' , fontFamily: 'monospace', fontWeight: 'bold', color: 'orange', marginBottom: '1rem'}}>What would you like to order?</p>
         <input
           type="text"
           placeholder="Search for food..."
@@ -61,7 +65,7 @@ const FoodMenu = ({cart, addToCart}) => {
       </div>
 
       {/* Food Type Cards */}
-      <div className="flex gap-4 mb-6 overflow-x-auto justify-center">
+      <div className="flex gap-4 mb-6 overflow-x-auto lg:justify-center">
         {foodCategories.map((category) => (
           <div
             key={category.name}
@@ -98,7 +102,7 @@ const FoodMenu = ({cart, addToCart}) => {
         ))}
       </div>
 
-      <Divider sx={{ borderColor: 'yellow' }}>Most Popolar</Divider>
+      <Divider sx={{fontSize: '2rem', fontFamily: 'monospace', fontWeight: 'bold', color: 'orange'}}>Most Popolar</Divider>
 
       {/* Sort Option */}
 
@@ -133,6 +137,7 @@ const FoodMenu = ({cart, addToCart}) => {
         //   </div>
         <FoodCard key={item.id} item={item} cart={cart} addToCart={addToCart}/>
         ))}
+      </div>
       </div>
     </div>
   );

@@ -1,10 +1,23 @@
+import { useState } from "react";
 import { useCart } from "../CartProvider";
 
 const CartPage = () => {
   const { cart, updateQuantity, removeFromCart } = useCart();
+  const [coupon, setCoupon] = useState("");
+  const [discount, setDiscount] = useState(0);
 
   // Calculate total price
-  const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+  const subtotal = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+  const totalPrice = subtotal - discount;
+
+  const applyCoupon = () => {
+    if (coupon === "FIRST20") {
+      setDiscount(subtotal * 0.2);
+    } else {
+      setDiscount(0);
+      alert("Invalid coupon code");
+    }
+  };
 
   return (
     <div className="max-w-3xl mx-auto p-6 bg-white shadow-lg rounded-lg">
@@ -52,8 +65,27 @@ const CartPage = () => {
             </div>
           ))}
 
+          {/* Coupon Code */}
+          <div className="mt-4">
+            <input
+              type="text"
+              placeholder="Enter Coupon Code"
+              className="border px-3 py-2 rounded w-full"
+              value={coupon}
+              onChange={(e) => setCoupon(e.target.value)}
+            />
+            <button
+              className="mt-2 bg-blue-500 text-white px-4 py-2 rounded w-full"
+              onClick={applyCoupon}
+            >
+              Apply Coupon
+            </button>
+          </div>
+
           {/* Total Price & Checkout Button */}
           <div className="mt-6 text-right">
+            <p className="text-lg">Subtotal: ₹{subtotal.toFixed(2)}</p>
+            <p className="text-lg text-green-600">Discount: -₹{discount.toFixed(2)}</p>
             <p className="text-xl font-bold">Total: ₹{totalPrice.toFixed(2)}</p>
             <button className="mt-3 bg-green-500 text-white px-5 py-2 rounded">Checkout</button>
           </div>

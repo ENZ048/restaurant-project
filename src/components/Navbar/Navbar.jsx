@@ -3,7 +3,7 @@ import Button from "@mui/material/Button";
 import { auth } from "../../firebase";
 import { signOut } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
-// import logo from "../../assets/logo.png";
+import logo from "../../assets/logo.png";
 import { TipsAndUpdates, Home, ShoppingCart } from "@mui/icons-material";
 import "./Navbar.css";
 
@@ -12,13 +12,13 @@ export default function Navbar() {
   const [user] = useAuthState(auth);
 
   return (
-    <div className="nav-element min-h-[5vh] pr-10 text-white flex  text-center justify-end gap-20 items-center px-5">
-      {/* <img src={logo} alt="" className="h-40" /> */}
+    <div className="nav-element max-h-40 text-white w-screen flex justify-between bg-[#f35637]  text-orange text-center md:px-20  gap-20 items-center">
+      <img src={logo} alt="" className="h-40" />
 
       <div>
         <ul className="nav-links flex list-none justify-between gap-4 w-80 text-2xl">
           <li>Home</li>
-          <li>AI Chef</li>
+          <Link to="/ai-chef"><li>AI Chef</li></Link>
           <Link to="/cart"><li>Cart</li></Link>
         </ul>
 
