@@ -5,7 +5,7 @@
 ---
 
 ## 🚀 Live Demo
-🎯 [**Live Demo**](https://restaurant-project-rho-wheat.vercel.app/auth/)
+🎯 [**MunchMate**](https://munchmatee.netlify.app/auth)
 
 ---
 
