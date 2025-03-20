@@ -5,7 +5,7 @@
 ---
 
 ## 🚀 Live Demo
-🎯 [**https://restaurant-project-rho-wheat.vercel.app/auth**](#)
+🎯 [**Live Demo**](https://restaurant-project-rho-wheat.vercel.app/auth)
 
 ---
 
