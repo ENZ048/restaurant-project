@@ -15,11 +15,11 @@ export default function Navbar() {
     <div className="nav-element max-h-40 text-white w-screen flex justify-between bg-[#f35637]  text-orange text-center md:px-20  gap-20 items-center">
       <img src={logo} alt="" className="h-40" />
 
-      <div>
+      <div className="links">
         <ul className="nav-links flex list-none justify-between gap-4 w-80 text-2xl">
-          <li>Home</li>
-          <Link to="/ai-chef"><li>AI Chef</li></Link>
-          <Link to="/cart"><li>Cart</li></Link>
+          <Link to="/" className="hover:text-yellow-500"><li>Home</li></Link>
+          <Link to="/ai-chef" className="hover:text-yellow-500"><li>AI Chef</li></Link>
+          <Link to="/cart" className="hover:text-yellow-500"><li>Cart</li></Link>
         </ul>
 
         <div className=" nav-icons flex justify-between w-40">

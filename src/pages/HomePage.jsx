@@ -11,8 +11,7 @@ export default function HomePage() {
   const [cart, setCart] = useState([]);
 
   const addToCart = (item) => {
-    setCart((prevCart) => [...prevCart, item]); // Add as a new entry
-    alert("item added to cart");
+    setCart((prevCart) => [...prevCart, item]);
   };
   
 

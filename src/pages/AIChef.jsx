@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { marked } from "marked";
 import "./AIChef.css";
+import Navbar from "../components/Navbar/Navbar";
 
 const AIChef = () => {
   const [query, setQuery] = useState("");
@@ -43,48 +44,69 @@ const AIChef = () => {
       console.log(data);
 
       if (data) {
-        const aiMessage = {role: 'assistant', content: marked.parse(data.candidates[0].content.parts[0].text.trim())};
+        const aiMessage = {
+          role: "assistant",
+          content: marked.parse(
+            data.candidates[0].content.parts[0].text.trim()
+          ),
+        };
         setMessages((prev) => [...prev, aiMessage]);
       } else {
         return "Oops! I couldn't process that. Try asking me something else!";
       }
     } catch (error) {
       console.error("Error fetching response from Gemini API:", error);
-      setMessages((prev) => [...prev, { role: "assistant", content: "Error fetching response. Please try again."}]);
+      setMessages((prev) => [
+        ...prev,
+        {
+          role: "assistant",
+          content: "Error fetching response. Please try again.",
+        },
+      ]);
     }
     setLoading(false);
   };
 
   return (
-    <div className="w-screen h-screen ai-page">   
+    <>
+      <Navbar />
+      <div className="w-screen h-[85vh] ai-page">
         <div className="max-w-3xl mx-auto p-6 bg-white shadow-lg rounded-lg pt-10">
-      <h2 className="text-3xl font-bold mb-6 text-center text-gray-800">AI Chef Marco - Recipe Chat</h2>
-      <div className="chat-box h-96 overflow-y-auto p-4 border rounded-lg bg-gray-100">
-        {messages.map((msg, index) => (
-          <div key={index} className={`p-2 my-2 rounded-lg ${msg.role === "user" ? "bg-blue-100 self-end text-right" : "bg-gray-200"}`}
-            dangerouslySetInnerHTML={{ __html: msg.content }}
-          ></div>
-        ))}
-        {loading && <p className="text-gray-600">Marco is thinking...</p>}
+          <h2 className="text-3xl font-bold mb-6 text-center text-gray-800">
+            AI Food Expert Marco
+          </h2>
+          <div className="chat-box h-96 overflow-y-auto p-4 border rounded-lg bg-gray-100">
+            {messages.map((msg, index) => (
+              <div
+                key={index}
+                className={`p-2 my-2 rounded-lg ${
+                  msg.role === "user"
+                    ? "bg-yellow-400 self-end text-right"
+                    : "bg-orange-400 text-white"
+                }`}
+                dangerouslySetInnerHTML={{ __html: msg.content }}
+              ></div>
+            ))}
+            {loading && <p className="text-gray-600">Marco is thinking...</p>}
+          </div>
+          <div className="flex gap-4 mt-4">
+            <input
+              type="text"
+              placeholder="Ask Marco anything about food..."
+              className="border p-3 flex-grow rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+            />
+            <button
+              className="bg-orange-500 cursor-pointer text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition-all"
+              onClick={fetchResponse}
+            >
+              Send
+            </button>
+          </div>
+        </div>
       </div>
-      <div className="flex gap-4 mt-4">
-        <input
-          type="text"
-          placeholder="Ask Marco about recipes..."
-          className="border p-3 flex-grow rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-        />
-        <button
-          className="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-all"
-          onClick={fetchResponse}
-        >
-          Send
-        </button>
-      </div>
-    </div>
-    </div>
-    
+    </>
   );
 };
 

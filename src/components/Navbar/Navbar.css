@@ -1,6 +1,9 @@
-li{
-    font-family: "Bebas Neue", sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=DynaPuff:wght@400..700&display=swap');
+
+.links{
+    font-family: "DynaPuff", system-ui;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .nav-icons{
@@ -11,6 +14,12 @@ li{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     z-index: 1;
 }
+
+.welcome-msg{
+    font-family: "DynaPuff", system-ui;
+    font-size: 1.5rem;
+}
+
 
 
 @media screen and (max-width:768px) {
